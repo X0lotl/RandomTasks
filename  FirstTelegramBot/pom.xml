@@ -1,5 +1,5 @@
 <dependency>
-	<groupId>org.telegram</groupId>
-	<artifactId>telegrambots</artifactId>
-	<version>3.5</version>
+	<groupId>com.github.pengrad</groupId>
+	<artifactId>java-telegram-bot-api</artifactId>
+	<version>5.4.0</version>
 </dependency>

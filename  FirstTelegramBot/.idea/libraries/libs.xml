@@ -1,0 +1,29 @@
+<component name="libraryTable">
+  <library name="libs">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/libs" />
+      <root url="file://$PROJECT_DIR$/libs/java-telegram-bot-api/library/src/main/java" />
+      <root url="file://$PROJECT_DIR$/libs/java-telegram-bot-api/library/src/test/java" />
+      <root url="file://$PROJECT_DIR$/libs/java-telegram-bot-api/sample/src/main/java" />
+      <root url="file://$PROJECT_DIR$/libs/okhttp/mockwebserver-deprecated/src/test/java" />
+      <root url="file://$PROJECT_DIR$/libs/okhttp/mockwebserver/src/test/java" />
+      <root url="file://$PROJECT_DIR$/libs/okhttp/okcurl/src/test/java" />
+      <root url="file://$PROJECT_DIR$/libs/okhttp/okhttp-brotli/src/test/java" />
+      <root url="file://$PROJECT_DIR$/libs/okhttp/okhttp-dnsoverhttps/src/test/java" />
+      <root url="file://$PROJECT_DIR$/libs/okhttp/okhttp-hpacktests/src/test/java" />
+      <root url="file://$PROJECT_DIR$/libs/okhttp/okhttp-logging-interceptor/src/test/java" />
+      <root url="file://$PROJECT_DIR$/libs/okhttp/okhttp-sse/src/test/java" />
+      <root url="file://$PROJECT_DIR$/libs/okhttp/okhttp-tls/src/test/java" />
+      <root url="file://$PROJECT_DIR$/libs/okhttp/okhttp/src/test/java" />
+      <root url="file://$PROJECT_DIR$/libs/okhttp/regression-test/src/androidTest/java" />
+      <root url="file://$PROJECT_DIR$/libs/okhttp/samples/crawler/src/main/java" />
+      <root url="file://$PROJECT_DIR$/libs/okhttp/samples/guide/src/main/java" />
+      <root url="file://$PROJECT_DIR$/libs/okhttp/samples/simple-client/src/main/java" />
+      <root url="file://$PROJECT_DIR$/libs/okhttp/samples/slack/src/main/java" />
+      <root url="file://$PROJECT_DIR$/libs/okhttp/samples/static-server/src/main/java" />
+      <root url="file://$PROJECT_DIR$/libs/okhttp/samples/unixdomainsockets/src/main/java" />
+    </SOURCES>
+  </library>
+</component>
