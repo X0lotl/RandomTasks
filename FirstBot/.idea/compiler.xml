@@ -6,11 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="FirstTelegramBot" />
+        <module name="FirstBot" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="FirstTelegramBot" target="1.5" />
-    </bytecodeTargetLevel>
   </component>
 </project>
