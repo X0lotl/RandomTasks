@@ -36,19 +36,15 @@ public class HelloWorldBot extends TelegramLongPollingBot {
         // 33 126
         StringBuilder password = new StringBuilder();
         for (int i = 0; i < passLength; i++) {
-            int charId = 33;
-            int charShift = (int) (Math.random() * 126);
-            password.append((char) (charShift + charId));
+            password.append((char) ((Math.random() * 126) + 33));
         }
         return password.toString();
     }
 
     private String readMessage(Update update) {
         Message readMessage = update.getMessage();
-        if (readMessage.hasText()) {
-            String message = String.valueOf(readMessage);
-            return message;
-        } else return null;
+        String message = String.valueOf(readMessage.getText());
+        return message;
     }
 
     private void sendMessage(String outputMessage, Update update) {
@@ -67,12 +63,12 @@ public class HelloWorldBot extends TelegramLongPollingBot {
     public void onUpdateReceived(Update update) {
         Message message = update.getMessage();
         SendMessage sendMessage = new SendMessage();
-        if (Objects.equals(readMessage(update), "/password")) {
-            sendMessage("Please enter password length", update);
-            passLength = Integer.parseInt(Objects.requireNonNull(readMessage(update)));
-            sendMessage(String.valueOf(passLength), update);
-            sendMessage(generateRandomPassword(), update);
-        }
+        readMessage(update);
+        sendMessage.setChatId(String.valueOf(message.getChatId()));
+        sendMessage("Please enter password length", update);
+        passLength = Integer.parseInt(readMessage(update));
+        sendMessage(String.valueOf(passLength), update);
+        sendMessage(generateRandomPassword(), update);
     }
 }
 
