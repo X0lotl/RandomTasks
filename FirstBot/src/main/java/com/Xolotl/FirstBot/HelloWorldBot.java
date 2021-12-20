@@ -36,7 +36,7 @@ public class HelloWorldBot extends TelegramLongPollingBot {
         // 33 126
         StringBuilder password = new StringBuilder();
         for (int i = 0; i < passLength; i++) {
-            password.append((char) ((Math.random() * 126) + 33));
+            password.append((char) ((Math.random() * 93) + 33));
         }
         return password.toString();
     }
