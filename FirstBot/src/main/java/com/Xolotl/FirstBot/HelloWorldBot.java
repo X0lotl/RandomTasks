@@ -1,5 +1,7 @@
 package com.Xolotl.FirstBot;
 
+import com.Xolotl.FirstBot.services.SendMessageService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
@@ -16,8 +18,7 @@ public class HelloWorldBot extends TelegramLongPollingBot {
     private String username;
     @Value("${telegram.bot.token}")
     private String token;
-    private String randomPass;
-    private int passLength;
+    private SendMessageService sendMessageService;
 
     public HelloWorldBot() {
     }
@@ -32,7 +33,7 @@ public class HelloWorldBot extends TelegramLongPollingBot {
         return token;
     }
 
-    private String generateRandomPassword() {
+    private String generateRandomPassword(int passLength) {
         // 33 126
         StringBuilder password = new StringBuilder();
         for (int i = 0; i < passLength; i++) {
@@ -61,14 +62,18 @@ public class HelloWorldBot extends TelegramLongPollingBot {
 
     @Override
     public void onUpdateReceived(Update update) {
-        Message message = update.getMessage();
-        SendMessage sendMessage = new SendMessage();
         readMessage(update);
-        sendMessage.setChatId(String.valueOf(message.getChatId()));
-        sendMessage("Please enter password length", update);
-        passLength = Integer.parseInt(readMessage(update));
-        sendMessage(String.valueOf(passLength), update);
-        sendMessage(generateRandomPassword(), update);
+        if(update.hasMessage()){
+            Message message = new Message();
+            if (message.hasText()){
+                sendMessageService.defaultMessage(message);
+            }
+        }
+    }
+
+    @Autowired
+    public void setSendMessageService(SendMessageService sendMessageService) {
+        this.sendMessageService = sendMessageService;
     }
 }
 
