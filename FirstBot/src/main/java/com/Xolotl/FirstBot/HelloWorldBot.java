@@ -1,7 +1,5 @@
 package com.Xolotl.FirstBot;
 
-import com.Xolotl.FirstBot.services.SendMessageService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
@@ -18,7 +16,8 @@ public class HelloWorldBot extends TelegramLongPollingBot {
     private String username;
     @Value("${telegram.bot.token}")
     private String token;
-    private SendMessageService sendMessageService;
+    private String randomPass;
+    private int passLength;
 
     public HelloWorldBot() {
     }
@@ -33,7 +32,7 @@ public class HelloWorldBot extends TelegramLongPollingBot {
         return token;
     }
 
-    private String generateRandomPassword(int passLength) {
+    private String generateRandomPassword() {
         // 33 126
         StringBuilder password = new StringBuilder();
         for (int i = 0; i < passLength; i++) {
@@ -62,6 +61,7 @@ public class HelloWorldBot extends TelegramLongPollingBot {
 
     @Override
     public void onUpdateReceived(Update update) {
+<<<<<<< HEAD
         if(update.hasMessage()){
             Message message = update.getMessage();
             if (message.hasText()){
@@ -73,6 +73,16 @@ public class HelloWorldBot extends TelegramLongPollingBot {
     @Autowired
     public void setSendMessageService(SendMessageService sendMessageService) {
         this.sendMessageService = sendMessageService;
+=======
+        Message message = update.getMessage();
+        SendMessage sendMessage = new SendMessage();
+        readMessage(update);
+        sendMessage.setChatId(String.valueOf(message.getChatId()));
+        sendMessage("Please enter password length", update);
+        passLength = Integer.parseInt(readMessage(update));
+        sendMessage(String.valueOf(passLength), update);
+        sendMessage(generateRandomPassword(), update);
+>>>>>>> parent of fc30789 (Error starting ApplicationContext)
     }
 }
 
