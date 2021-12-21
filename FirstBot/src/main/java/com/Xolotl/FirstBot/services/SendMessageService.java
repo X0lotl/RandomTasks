@@ -9,7 +9,7 @@ import org.telegram.telegrambots.meta.api.objects.Message;
 @Service
 public class SendMessageService {
 
-    private final MessageSender messageSender;
+    MessageSender messageSender = new MessageSender();
 
     public SendMessageService(MessageSender messageSender) {
         this.messageSender = messageSender;

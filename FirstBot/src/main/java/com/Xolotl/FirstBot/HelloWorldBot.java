@@ -62,9 +62,8 @@ public class HelloWorldBot extends TelegramLongPollingBot {
 
     @Override
     public void onUpdateReceived(Update update) {
-        readMessage(update);
         if(update.hasMessage()){
-            Message message = new Message();
+            Message message = update.getMessage();
             if (message.hasText()){
                 sendMessageService.defaultMessage(message);
             }
