@@ -1,12 +1,13 @@
-package com.Xolotl.FirstBot;
+package com.Xolotl;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class FirstBotApplication {
+public class TelegramTutorialsApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(FirstBotApplication.class, args);
+		SpringApplication.run(TelegramTutorialsApplication.class, args);
 	}
+
 }
