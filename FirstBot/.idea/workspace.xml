@@ -6,14 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="bdfdb5e1-42cf-4060-96fa-afbcaa62f2c6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Xolotl/HelloWorldBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Xolotl/HelloWorldBot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Xolotl/actionsInRows/RowsActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Xolotl/actionsInRows/RowsActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Xolotl/messagesender/MessageSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Xolotl/messagesender/MessageSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Xolotl/messagesender/MessageSenderImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Xolotl/messagesender/MessageSenderImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Xolotl/services/SendMessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Xolotl/services/SendMessageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Xolotl/processors/DefaultProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Xolotl/processors/DefaultProcessor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

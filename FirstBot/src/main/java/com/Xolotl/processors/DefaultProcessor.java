@@ -17,11 +17,11 @@ public class DefaultProcessor implements Processor {
 
     @Override
     public void executeMessage(Message message) {
-
+        messageHandler.choose(message);
     }
 
     @Override
     public void executeCallBackQuery(CallbackQuery callbackQuery) {
-
+        callbackQueryHandler.choose(callbackQuery);
     }
 }

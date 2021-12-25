@@ -34,6 +34,12 @@ public class HelloWorldBot extends TelegramLongPollingBot {
 
     @Override
     public void onUpdateReceived(Update update) {
-        processor.process(update);
+        Message message = update.getMessage();
+        sendMessageService.keyBord(message, update);
+    }
+
+    @Autowired
+    public void setSendMessageService(SendMessageService sendMessageService) {
+        this.sendMessageService = sendMessageService;
     }
 }
