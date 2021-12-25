@@ -1,5 +1,6 @@
 package com.Xolotl;
 
+import com.Xolotl.processors.Processor;
 import com.Xolotl.services.SendMessageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -15,6 +16,11 @@ public class HelloWorldBot extends TelegramLongPollingBot {
     @Value("${telegram.bot.token}")
     private String token;
     private SendMessageService sendMessageService;
+    private final Processor processor;
+
+    public HelloWorldBot(Processor processor) {
+        this.processor = processor;
+    }
 
     @Override
     public String getBotUsername() {
@@ -28,13 +34,6 @@ public class HelloWorldBot extends TelegramLongPollingBot {
 
     @Override
     public void onUpdateReceived(Update update) {
-        Message message = update.getMessage();
-        sendMessageService.keyBord(message, update);
-
-    }
-
-    @Autowired
-    public void setSendMessageService(SendMessageService sendMessageService) {
-        this.sendMessageService = sendMessageService;
+        processor.process(update);
     }
 }

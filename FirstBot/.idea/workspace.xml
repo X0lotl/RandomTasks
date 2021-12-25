@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bdfdb5e1-42cf-4060-96fa-afbcaa62f2c6" name="Changes" comment="" />
+    <list default="true" id="bdfdb5e1-42cf-4060-96fa-afbcaa62f2c6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Xolotl/HelloWorldBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Xolotl/HelloWorldBot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Xolotl/actionsInRows/RowsActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Xolotl/actionsInRows/RowsActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Xolotl/messagesender/MessageSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Xolotl/messagesender/MessageSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Xolotl/messagesender/MessageSenderImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Xolotl/messagesender/MessageSenderImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Xolotl/services/SendMessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Xolotl/services/SendMessageService.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,9 +40,14 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="22brysaloWpWvrycBoYmPJMduTL" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -56,6 +71,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.Xolotl.processors" />
+      <recent name="com.Xolotl.domain" />
       <recent name="com.Xolotl.messageReader" />
     </key>
   </component>
@@ -67,7 +84,7 @@
       <module name="telegram-tutorials.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.Xolotl.*" />
+          <option name="PATTERN" value="com.Xolotl.cache.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>

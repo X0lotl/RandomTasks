@@ -24,13 +24,16 @@ public class RowsActions {
     private  void waitForUpdate (Update update){
         int temp = update.getUpdateId();
         int temp2 = update.getUpdateId();
+        readMessage(update);
         if (temp == temp2){
+            synchronized (update){
             try {
-                wait(5000);
+                update.wait(5000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
             waitForUpdate(update);
+        }
         }
         else return;
     }

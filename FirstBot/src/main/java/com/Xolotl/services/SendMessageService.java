@@ -1,8 +1,10 @@
 package com.Xolotl.services;
 
 
+import com.Xolotl.HelloWorldBot;
 import com.Xolotl.actionsInRows.RowsActions;
 import com.Xolotl.backgroundActions.GenerateNewPassword;
+import com.Xolotl.domain.BotUser;
 import com.Xolotl.messagesender.MessageSender;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
@@ -22,7 +24,8 @@ public class SendMessageService {
 
     private void initAction(){
 
-    };
+    }
+    //private Chache<BotUser> cache;
 
     private final MessageSender messageSender;
 
@@ -61,7 +64,13 @@ public class SendMessageService {
         markup.setResizeKeyboard(true);
         markup.setOneTimeKeyboard(true);
         if (message.getText().equals("Generate new password")){
-            row1action.row1Action(message, update);
+           // row1action.row1Action(message, update);
+            if(update.hasMessage()){
+                message = update.getMessage();
+                sendMessage.setText(message.getText());
+                System.out.println(message.getText());
+                messageSender.sendMessage(sendMessage);
+            }
         }
         //sendMessage.setReplyMarkup(markup);
         // messageSender.sendMessage(sendMessage);
