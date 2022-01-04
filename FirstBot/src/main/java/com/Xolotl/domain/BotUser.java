@@ -6,6 +6,7 @@ public class BotUser {
     private Position position;
     private String fullName;
     private String phoneNumber;
+    private int newPasswordLength;
 
     public Long getId() {
         return id;
@@ -46,4 +47,13 @@ public class BotUser {
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
+
+    public void setNewPasswordLength(int newPasswordLength){
+        this.newPasswordLength = newPasswordLength;
+    }
+
+    public int getNewPasswordLength(){
+        return newPasswordLength;
+    }
+
 }

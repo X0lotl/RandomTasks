@@ -4,7 +4,9 @@ package com.Xolotl.services;
 import com.Xolotl.HelloWorldBot;
 import com.Xolotl.actionsInRows.RowsActions;
 import com.Xolotl.backgroundActions.GenerateNewPassword;
+import com.Xolotl.cache.Cache;
 import com.Xolotl.domain.BotUser;
+import com.Xolotl.domain.Position;
 import com.Xolotl.messagesender.MessageSender;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
@@ -25,9 +27,16 @@ public class SendMessageService {
     private void initAction(){
 
     }
-    //private Chache<BotUser> cache;
+    private Cache<BotUser> cache;
 
     private final MessageSender messageSender;
+    private BotUser generateUserFromMessage(Message message){
+        BotUser user = new BotUser();
+        user.setUsername(message.getFrom().getUserName());
+        user.setId(message.getChatId());
+        user.setPosition(Position.INPUT_USERNAME);
+        return user;
+    }
 
     public SendMessageService(MessageSender messageSender) {
         this.messageSender = messageSender;
@@ -37,6 +46,9 @@ public class SendMessageService {
         SendMessage sendMessage = new SendMessage();
         Message massage = update.getMessage();
         sendMessage.setChatId(String.valueOf(message.getChatId()));
+        //BotUser user = cache.findBy(message.getChatId());
+
+
 
         var markup = new ReplyKeyboardMarkup();
         var keyboardRows = new ArrayList<KeyboardRow>();
@@ -48,7 +60,6 @@ public class SendMessageService {
         //   row1.add(KeyboardButton.builder().text("Generate new password"))
         row1.add(KeyboardButton.builder()
                         .text("Generate new password")
-
                 .build());
         row2.add(KeyboardButton.builder().text("Save last password as (soon)")
                 .requestContact(true)
@@ -63,16 +74,18 @@ public class SendMessageService {
         markup.setKeyboard(keyboardRows);
         markup.setResizeKeyboard(true);
         markup.setOneTimeKeyboard(true);
-        if (message.getText().equals("Generate new password")){
-           // row1action.row1Action(message, update);
+       /* if (message.getText().equals("Generate new password")){
+            user.setPosition(Position.INPUT_NEW_PASSWORD_LENGTH);
             if(update.hasMessage()){
                 message = update.getMessage();
                 sendMessage.setText(message.getText());
                 System.out.println(message.getText());
                 messageSender.sendMessage(sendMessage);
             }
-        }
-        //sendMessage.setReplyMarkup(markup);
-        // messageSender.sendMessage(sendMessage);
+           // row1action.row1Action(message, update);
+
+        }*/
+        sendMessage.setReplyMarkup(markup);
+       // messageSender.sendMessage(sendMessage);
     }
 }

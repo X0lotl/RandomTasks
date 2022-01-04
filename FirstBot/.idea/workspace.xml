@@ -9,7 +9,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Xolotl/HelloWorldBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Xolotl/HelloWorldBot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Xolotl/processors/DefaultProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Xolotl/processors/DefaultProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Xolotl/domain/BotUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Xolotl/domain/BotUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Xolotl/domain/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Xolotl/domain/Position.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Xolotl/services/SendMessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Xolotl/services/SendMessageService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,27 +22,6 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
-  </component>
-  <component name="ExternalProjectsManager">
-    <system id="GRADLE">
-      <state>
-        <projects_view>
-          <tree_state>
-            <expand />
-            <select />
-          </tree_state>
-        </projects_view>
-      </state>
-    </system>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Enum" />
-        <option value="Interface" />
-        <option value="Class" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -60,55 +41,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
-  <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.Xolotl.processors" />
-      <recent name="com.Xolotl.domain" />
-      <recent name="com.Xolotl.messageReader" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Application.TelegramTutorialsApplication">
-    <configuration name="TelegramTutorialsApplication" type="Application" factoryName="Application" temporary="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-17" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.Xolotl.TelegramTutorialsApplication" />
-      <module name="telegram-tutorials.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.Xolotl.cache.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FirstBot [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="dependencies" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager">
     <configuration name="TelegramTutorialsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="telegram-tutorials.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.Xolotl.TelegramTutorialsApplication" />
@@ -118,16 +52,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue="Application.TelegramTutorialsApplication" />
-      <item itemvalue="Gradle.FirstBot [dependencies]" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Gradle.FirstBot [dependencies]" />
-        <item itemvalue="Application.TelegramTutorialsApplication" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -138,6 +62,7 @@
       <option name="presentableId" value="Default" />
       <updated>1640117385030</updated>
       <workItem from="1640117386309" duration="2036000" />
+      <workItem from="1640430203605" duration="5366000" />
     </task>
     <servers />
   </component>

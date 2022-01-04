@@ -1,11 +1,13 @@
 package com.Xolotl;
 
+import com.Xolotl.messagesender.MessageSender;
 import com.Xolotl.processors.Processor;
 import com.Xolotl.services.SendMessageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
+import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.Update;
 
@@ -16,11 +18,8 @@ public class HelloWorldBot extends TelegramLongPollingBot {
     @Value("${telegram.bot.token}")
     private String token;
     private SendMessageService sendMessageService;
-    private final Processor processor;
+    private  MessageSender messageSender;
 
-    public HelloWorldBot(Processor processor) {
-        this.processor = processor;
-    }
 
     @Override
     public String getBotUsername() {
@@ -35,7 +34,16 @@ public class HelloWorldBot extends TelegramLongPollingBot {
     @Override
     public void onUpdateReceived(Update update) {
         Message message = update.getMessage();
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(String.valueOf(message.getChatId()));
         sendMessageService.keyBord(message, update);
+        /*if(update.hasMessage()){
+            if(message.getText().equals("Generate new password"))
+            message = update.getMessage();
+            sendMessage.setText(message.getText());
+            System.out.println(message.getText());
+            messageSender.sendMessage(sendMessage);
+        }*/
     }
 
     @Autowired
